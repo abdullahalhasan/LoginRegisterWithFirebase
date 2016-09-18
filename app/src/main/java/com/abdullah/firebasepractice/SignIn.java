@@ -43,7 +43,7 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                startActivity(new Intent(getApplicationContext(),SignIn.class));
+                startActivity(new Intent(getApplicationContext(),SignUp.class));
             }
         });
     }
