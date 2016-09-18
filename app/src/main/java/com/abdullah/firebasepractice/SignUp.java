@@ -59,6 +59,8 @@ public class SignUp extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 Toast.makeText(SignUp.this, "Congratulation! Registration Successgull!!", Toast.LENGTH_SHORT).show();
+                                finish();
+                                startActivity(new Intent(getApplicationContext(),SignIn.class));
                             } else {
                                 Toast.makeText(SignUp.this, "Failed! Check Network Connecion!!", Toast.LENGTH_SHORT).show();
                             }
@@ -68,7 +70,7 @@ public class SignUp extends AppCompatActivity {
                         }
                     });
 
-            startActivity(new Intent(getApplicationContext(),SignIn.class));
+
         }
     }
 }
